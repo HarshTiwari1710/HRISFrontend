@@ -65,7 +65,7 @@ const [isEditing, setIsEditing] = useState(false);
   const handleAddColumn = async () => {
     if (newColumnName) {
       try {
-        const response = await fetch('https://16e4-103-165-30-2.in.ngrok.io/add-column-sql', {
+        const response = await fetch('http://127.0.0.1:5000/add-column-sql', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',  "Access-Control-Allow-Origin": "*",
@@ -86,7 +86,7 @@ const [isEditing, setIsEditing] = useState(false);
   
   const handlesubmit = async () => {
     try {
-      const response = await fetch('https://16e4-103-165-30-2.in.ngrok.io/add_employee', {
+      const response = await fetch('http://127.0.0.1:5000/add_employee', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -159,11 +159,11 @@ const [isEditing, setIsEditing] = useState(false);
           
         <Typography variant="h4" sx={{ mb: 3 }}>Time Keep</Typography>
           <Typography variant="h6" sx={{ mb: 3 }}>Emplyoee Name</Typography>
-          <TextField  label="Row value" variant="outlined" value={inputValue} onChange={handleChangeInputValue} sx={{ width: '100%', mb: 2 }} />
+          <TextField  label="Row value" variant="outlined"  sx={{ width: '100%', mb: 2 }} />
           <Typography variant="h6" sx={{ mb: 3 }}>Emplyoee Contact</Typography>
-          <TextField label="Row value" variant="outlined" value={inputValue} onChange={handleChangeInputValue} sx={{ width: '100%', mb: 2 }} />
+          <TextField label="Row value" variant="outlined"   sx={{ width: '100%', mb: 2 }} />
           <Typography variant="h6" sx={{ mb: 3 }}>Employee Address</Typography>
-          <TextField label="Row value" variant="outlined" value={inputValue} onChange={handleChangeInputValue} sx={{ width: '100%', mb: 2 }} />
+          <TextField label="Row value" variant="outlined"  sx={{ width: '100%', mb: 2 }} />
 <div></div>
 <div  style={{display: "flex", gap: "2rem",marginTop:"20px"}}> <Button variant="contained" color="primary" onClick={handlesubmit}>Save</Button>
           <Button variant="contained" color="secondary" onClick=
